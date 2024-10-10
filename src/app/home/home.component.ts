@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, DoCheck} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +7,19 @@ import { Component } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent implements DoCheck {
+  num: number = 1;
+
+  ngDoCheck() {
+    console.log("Uma mudanca foi feita");
+  }
+
+  adicional() {
+    this.num++;
+  }
+  diminui(){
+    this.num--;
+  }
+
 
 }

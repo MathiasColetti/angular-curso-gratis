@@ -13,10 +13,5 @@ import {NgIf} from "@angular/common";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'serv';
-  exibeHome: boolean = true;
 
-  destruir() {
-    this.exibeHome = false;
-  }
 }
